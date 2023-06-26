@@ -104,3 +104,18 @@ document.getElementById("inputForm").addEventListener("submit", function(event) 
       });
   }
 });
+
+var testStringField = document.getElementById("testString");
+testStringField.addEventListener("input", function() {
+  var inputValue = testStringField.value.trim().toLowerCase();
+  var exampleStrings = document.querySelectorAll("#exampleStrings option");
+
+  exampleStrings.forEach(function(option) {
+    var optionValue = option.value.toLowerCase();
+    if (optionValue.startsWith(inputValue)) {
+      option.style.display = "block";
+    } else {
+      option.style.display = "none";
+    }
+  });
+});
