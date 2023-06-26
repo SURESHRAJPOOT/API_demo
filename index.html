@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Parse Tree Test API Demo</title>
+  <title>Ingredient extraction demo</title>
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
     #outputContainer {
@@ -11,11 +11,17 @@
 </head>
 <body>
   <div class="container">
-    <h1>Parse Tree Test API Demo</h1>
+    <h1>Ingredient extraction demo</h1>
     <form id="inputForm">
       <div class="form-group">
         <label for="testString">Test String:</label>
-        <textarea id="testString" class="form-control" rows="1" required></textarea>
+        <input id="testString" class="form-control" list="exampleStrings" required>
+        <datalist id="exampleStrings">
+          <option value="Example 1">
+          <option value="Example 2">
+          <option value="Example 3">
+          <option value="Example 4">
+        </datalist>
       </div>
       <button type="submit" class="btn btn-primary">Execute</button>
     </form>
